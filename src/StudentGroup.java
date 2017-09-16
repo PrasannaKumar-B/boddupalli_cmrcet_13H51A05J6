@@ -11,7 +11,7 @@ import java.util.Date;
  * DO NOT PUT any classes into packages
  *
  */
-public class StudentGroup implements StudentArrayOperation {
+public class StudentGroup implements StudentArrayOperation{
 
 	private Student[] students;
 	
@@ -39,28 +39,28 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getStudent implements throws(int index) {
+	public Student getStudent (int index) {
 		// Add your implementation 
-		if(index<0&&index>students.length())
-		{throw IllegalArgumentException;
+		if(index<0)
+		{
 		return null;
 		}
 		else
 		{
-			return student[index];
+			return students[index];
 		}
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		if(index<0&&index>students.length())
-		{throw IllegalArgumentException;
-		return null;
+		if(index<0)
+		{
+		    
 		}
 		else
 		{
-			student=student[i];
+			student=students[index];
 		}
 		
 	}
